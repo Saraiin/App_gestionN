@@ -21,6 +21,7 @@ with st.form("form_notes"):
             <button type="submit"  padding: 10px 24px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Enregistrer</button>
         </div>
     """, unsafe_allow_html=True)
+    submit = st.form_submit_button("Enregistrer")
 
 if submit:
         if nom_prenom and module:
