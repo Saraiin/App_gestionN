@@ -4,7 +4,9 @@ import pandas as pd
 st.set_page_config(page_title="Gestion des Notes", page_icon="logo.png")
 st.image("logo.png", width=100)
 st.title("Application de Gestion des Notes")
-submit = st.form_submit_button("Enregistrer")
+st.markdown("""
+    <p style="color: grey; font-size: 16px;">Veuillez remplir le formulaire ci-dessous pour enregistrer une note.</p>
+""", unsafe_allow_html=True)
 
 
 if "data" not in st.session_state:
@@ -14,11 +16,7 @@ with st.form("form_notes"):
     nom_prenom = st.text_input("Nom et Prénom")
     module = st.text_input("Module")
     note = st.number_input("Note finale", min_value=0.0, max_value=20.0, step=0.1)
-    st.markdown("""
-        <div style="display: flex; justify-content: center;">
-            <button type="submit"  padding: 10px 24px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Enregistrer</button>
-        </div>
-    """, unsafe_allow_html=True)
+    submit = st.form_submit_button("Enregistrer")
     
 
 if submit:
