@@ -22,7 +22,7 @@ with st.form("form_notes"):
 if submit:
         if nom_prenom and module:
             new_entry = pd.DataFrame({
-                "Nom & Prénom": [nom_prenom],
+                "Nom et Prénom": [nom_prenom],
                 "Module": [module],
                 "Note finale": [note]
             })
