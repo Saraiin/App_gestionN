@@ -16,7 +16,11 @@ with st.form("form_notes"):
     nom_prenom = st.text_input("Nom et Prénom")
     module = st.text_input("Module")
     note = st.number_input("Note finale", min_value=0.0, max_value=20.0, step=0.1)
-    submit = st.form_submit_button("Enregistrer")
+    st.markdown("""
+        <div style="display: flex; justify-content: center;">
+            <button type="submit"  padding: 10px 24px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Enregistrer</button>
+        </div>
+    """, unsafe_allow_html=True)
 
 if submit:
         if nom_prenom and module:
