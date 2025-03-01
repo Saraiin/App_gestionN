@@ -4,7 +4,7 @@ import pandas as pd
 st.set_page_config(page_title="Gestion des Notes", page_icon="logo.png")
 st.image("logo.png", width=100)
 st.title("Application de Gestion des Notes")
-st.subheader("Veuillez remplir le formulaire ci-dessous pour enregistrer une note")
+st.subheader("Veuillez remplir le formulaire ci-dessous pour enregistrer une note.")
 
 if "data" not in st.session_state:
     st.session_state.data = pd.DataFrame(columns=["Nom et Prénom", "Module", "Note finale"])
